@@ -1,0 +1,124 @@
+@keyframes example {
+    from {
+        height: 0px;
+        display: none;
+    }
+    to {
+        height: 50px;
+        display: inline
+    }
+}
+
+.a {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+.c.img-responsive {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+    height: auto;
+    left: 0;
+    width: 100vw;
+}
+
+.showw {
+    width: 20%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 3s linear;
+    -webkit-transition: visibility 1s, opacity 3s linear;
+    /* Safari */
+    background: black;
+    padding: 5%;
+}
+
+.snack {
+    visibility: visible;
+    opacity: 1;
+}
+
+.c.img-responsive.b {
+    top: 5%;
+    left: 90%;
+    border-radius: 50%;
+    height: 15vh;
+    width: 15vh;
+}
+
+.social {
+    background: #ffffff;
+    color: black;
+    padding: 7px 10px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social:hover {
+    background: #2196f3;
+    color: white;
+}
+
+.nodejs-chip {
+    background: #d0f5c6!important;
+    color: black!important;
+}
+
+.angular-chip {
+    background: #f1a4a4!important;
+    color: black!important;
+}
+
+.skill {
+    display: inline-block;
+    margin-bottom: 20px!important;
+}
+
+p.title {
+    font-weight: 500;
+    color: #4fb3be;
+}
+
+p.duration {
+    font-weight: 500;
+    color: #82ae8c;
+}
+
+span.company {
+    font-weight: 600;
+    color: #6c6c6c;
+}
+
+.mongo-chip {
+    background-color: #b8da9f!important;
+}
+
+.reactjs-chip {
+    background-color: #d7fcff!important;
+}
+
+.c-chip {
+    background: #cfece5!important;
+    width: 82px!important;
+}
+
+.cpp-chip {
+    background: #b5c6d6!important;
+    width: 100px!important;
+}
+
+.java-chip {
+    background: #f9d6cc!important;
+    width: 100px!important;
+}
+
+.css-chip {
+    background: #bcdcea!important;
+    width: 100px!important;
+}
+
+#one {
+    padding: 10px
+}
