@@ -1,1 +1,440 @@
-hello
+<html>
+<html ng-app="ritishResume" ng-controller="myCtrl" ng-cloak>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="height=device-height,width=device-width, initial-scale=1">
+	<meta name="description" content="I am Full Stack Developer who loves to write a lot of code within a collaborative development environment.  :) ">
+	<meta name="keywords" content="Ritish Gumber, Ritish, Gumber, Ritish Gumber Resume,Startup,Engineer,FrankBrain,Frank Brain,ritishgumber,full stack,developer">
+	<link rel="author" href="https://plus.google.com/10775835362234118053" />
+	<link rel="canonical" href="https://www.ritishgumber.me" />
+	<meta property="og:url" content="https://www.ritishgumber.me">
+	<meta property="og:image" content="https://www.ritishgumber.me/img/ritish_img.jpg">
+	<meta property="og:description" content="I am Full Stack Developer who loves to write a lot of code within a collaborative development environment.  :)">
+	<meta property="og:title" content="Ritish Gumber  ">
+	<meta property="og:site_name" content="Ritish Gumber">
+	<meta property="og:see_also" content="https://www.ritishgumber.me/allProjects">
+	<meta itemprop="name" content="Ritish Gumber">
+	<meta itemprop="description" content="I am Full Stack Developer who loves to write a lot of code within a collaborative development environment.  :)">
+	<meta itemprop="image" content="https://www.ritishgumber.me/img/ritish_img.jpg">
+	<meta name="twitter:card" content="I am Full Stack Developer who loves to write a lot of code within a collaborative development environment.  :)">
+	<meta name="twitter:url" content="https://www.ritishgumber.me">
+	<meta name="twitter:title" content="Ritish Gumber">
+	<meta name="twitter:description" content="I am Full Stack Developer who loves to write a lot of code within a collaborative development environment.  :)">
+	<meta name="twitter:creator" content="@ritishgumber">
+	<meta name="twitter:site" content="@ritishgumber">
+	<meta name="twitter:image" content="https://www.ritishgumber.me/img/ritish_img.jpg">
+	<script src="js/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- start Mixpanel -->
+	<script type="text/javascript">
+		(function (e, a) {
+			if (!a.__SV) {
+				var b = window;
+				try {
+					var c, l, i, j = b.location,
+						g = j.hash;
+					c = function (a, b) {
+						return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+					};
+					g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage
+						.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+				} catch (m) {}
+				var k, h;
+				window.mixpanel = a;
+				a._i = [];
+				a.init = function (b, c, f) {
+					function e(b, a) {
+						var c = a.split(".");
+						2 == c.length && (b = b[c[0]], a = c[1]);
+						b[a] = function () {
+							b.push([a].concat(Array.prototype.slice.call(arguments,
+								0)))
+						}
+					}
+					var d = a;
+					"undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+					d.people = d.people || [];
+					d.toString = function (b) {
+						var a = "mixpanel";
+						"mixpanel" !== f && (a += "." + f);
+						b || (a += " (stub)");
+						return a
+					};
+					d.people.toString = function () {
+						return d.toString(1) + ".people (stub)"
+					};
+					k =
+						"disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
+						.split(" ");
+					for (h = 0; h < k.length; h++) e(d, k[h]);
+					a._i.push([b, c, f])
+				};
+				a.__SV = 1.2;
+				b = e.createElement("script");
+				b.type = "text/javascript";
+				b.async = !0;
+				b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol &&
+					"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ?
+					"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+				c = e.getElementsByTagName("script")[0];
+				c.parentNode.insertBefore(b, c)
+			}
+		})(document, window.mixpanel || []);
+		mixpanel.init("808103acc093bf58b3fa7b28930f6789");
+	</script>
+	<!-- end Mixpanel -->
+	<script src="js/app.js"></script>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="js/angular-touch.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Ritish Gumber</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="js/angular-animate.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div id="wrapper" class="container" ng-init="load()">
+		<div id="one">
+			<img ng-src="{{x.searchText.$dirty && 'img/ritish_img.jpg' || 'img/ritish.JPG'}}" ng-class="{'c img-responsive b':x.searchText.$dirty,'c responsive-img':!x.searchText.$dirty }"></img>
+		</div>
+		<div id="two">
+			<form name="x">
+				<input ng-focus="focus=true" ng-blur="focus=false" type="text" class="form-control" name="searchText" placeholder="Search ...."
+				    ng-model="searchText" ng-change="inputTextChange()"></input>
+			</form>
+			<a class="waves-circle waves-effect waves-light btn-floating blue"><i class="material-icons">trending_up</i></a>
+			<div class="chip   waves-effect" ng-click="query(1);x.searchText.$dirty=true"><a href="#">About</a></div>
+			<div class="chip  waves-effect " ng-click="query(2);x.searchText.$dirty=true"><a href="#">Projects </a></div>
+			<div class="chip  waves-effect " ng-click="query(3);x.searchText.$dirty=true"><a href="#">Experience</a></div>
+			<div class="chip  waves-effect " ng-click="query(4);x.searchText.$dirty=true"><a href="#">Skills</a></div>
+			<div class="chip  waves-effect " ng-click="query(5);x.searchText.$dirty=true"><a href="#">Resume</a></div>
+
+
+		</div>
+		<div class="row" ng-show="searchText == 'about'">
+			<div class="col s12 m12">
+				<div class="card blue-grey darken-1">
+					<div class="card-content white-text"> <span class="card-title"></span>
+						<p>Hello, <br> <br>I am Full Stack Developer who loves to write a lot of code within a collaborative development environment.
+							:)
+							<br><br>
+							<a href="https://www.facebook.com/ritishgumber" target="_blank" class="social"><i class="fa fa-facebook" ng-mouseover="track('Hovered Facebook icon')"></i></a>
+							<a href="https://www.twitter.com/ritishgumber" target="_blank" class="social"><i class="fa fa-twitter" ng-mouseover="track('Hovered Twitter icon')"></i></a>
+							<a href="https://www.linkedin.com/in/ritishgumber/" target="_blank" class="social"><i class="fa fa-linkedin" ng-mouseover="track('Hovered LinkedIn icon')"></i></a>
+							<a href="https://angel.co/ritishgumber" target="_blank" class="social"><i class="fa fa-angellist" ng-mouseover="track('Hovered AngelList icon')"></i></a>
+							<a href="https://github.com/ritishgumber" target="_blank" class="social"><i class="fa fa-github" ng-mouseover="track('Hovered Github icon')"></i></a>
+							<a class="social" ng-click="openEmail()"><i class="fa fa-envelope" ng-mouseover="track('Hovered Email icon')"></i></a>
+						</p>
+					</div>
+					<div class="card-action"> <a href="" ng-click="more=!more;track('Clicked more on about')">More..</a> </div>
+				</div>
+			</div>
+
+			<div class="col s12 m12" ng-show="more">
+				<div class="card white darken-1" style="display:inline-block;width:100%;height:auto">
+					<div class="card-content black-text">
+						<ul>
+							<li style="padding:10px" class="col m6 collection-item avatar"> <a href="" class="btn-floating red " ng-click="openEmail()"><i class="material-icons">email</i> </a> <span class="title"><a href="mailto:hi@ritishgumber.me">hi@ritishgumber.me</span>								</p>
+							</li>
+							<li style="padding:10px" class="collection-item  col m6 avatar"> <a href="#" class="btn-floating green"><i class="material-icons">phone_iphone</i> </a> <span class="title"><a href="tel:+91-9810474693">+91-9810474693</span>								</p>
+							</li>
+							<li style="padding:10px" class="collection-item col m6  avatar"> <a href="#" class="btn-floating purple"><i class="material-icons">cake</i> </a> <span class="title">12th July 1995</span>								</p>
+							</li>
+							<li style="padding:10px" class="collection-item col m6  avatar"> <a href="#" class="btn-floating pink" ng-click="openMap()"><i class="material-icons">home</i> </a> <span class="title">Najafgarh,New Delhi</span>								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-show="searchText == 'resume'" class="row">
+			<br><br>
+			<iframe src="https://resume.ritishgumber.me" class="col m8 " style="height:500px" frameborder="0"></iframe>
+
+		</div>
+		<div ng-show="searchText == 'work'" class="row">
+			<div class="col s12 m4">
+				<div class="card " ng-click="track('Clicked Blood Cloud homepage')">
+					<div class="card-image waves-effect waves-block waves-light"> <img class="activator responsive-img" src="img/bc.jpg"> </div>
+					<div class="card-content"> <span class="card-title activator grey-text text-darken-4">Blood Cloud<i class="material-icons right">more_vert</i></span>
+						<p><a href="http://thebloodcloud.com" target="_blank">Visit Website </a></p>
+					</div>
+					<div class="card-reveal"> <span class="card-title grey-text text-darken-4"><h3>Blood Cloud</h3><i class="material-icons right">close</i></span>
+						<ul class="collection with-header">
+							<li class="collection-item">
+								<div>Blood Cloud is a interface between blood donors and receivers . <a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a></div>
+							</li>
+							<li class="collection-item">
+								<div>Anyone in need can request for blood by filling up a simple form. The request will be sent to registered donors nearby
+									and can communicate.<a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a></div>
+							</li>
+							<li class="collection-item">
+								<div>No Sign Up required.<a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a></div>
+							</li>
+							<li class="collection-item">
+								<div>Can schedule blood request.<a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m4">
+				<div class="card  " ng-click="track('Clicked nMemories homepage')">
+					<div class="card-image waves-effect waves-block waves-light"> <img class="activator responsive-img" src="img/nm.jpg"> </div>
+					<div class="card-content"> <span class="card-title activator grey-text text-darken-4">nMemories<i class="material-icons right">more_vert</i></span>
+						<p><a href="http://n--memories.appspot.com/" target="_blank">Visit Website </a></p>
+					</div>
+					<div class="card-reveal"> <span class="card-title grey-text text-darken-4"><h3>nMemories.com</h3><i class="material-icons right">close</i></span>						We aim at capturing memories on the first day of birth, the emotions and bond felt by the family and friends when the
+						new guest enters. In the story we dont make the baby hero - the memories are so! . We integrate technology to provide
+						services on the go. </div>
+				</div>
+			</div>
+			<div class="col s12 m4">
+				<div class="card  " ng-click="track('Clicked battery alarm homepage')">
+					<div class="card-image waves-effect waves-block waves-light"> <img class="activator responsive-img" src="img/bn.png"> </div>
+					<div class="card-content"> <span class="card-title activator grey-text text-darken-4">Battery Alarm<i class="material-icons right">more_vert</i></span>
+						<p><a href="https://play.google.com/store/apps/details?id=ritish.com.switchscreens" target="_blank">Download Link</a></p>
+
+					</div>
+					<div class="card-reveal"> <span class="card-title grey-text text-darken-4"><h3>Battery Alarm</h3><i class="material-icons right">close</i></span>						An application for you to unplug your charger on time to save electricity and protect your device from overcharging
+						.Simply set the battery level as to receive the alert ringtone.You can set custom ringtone as well ;)</div>
+				</div>
+			</div>
+			<div class="col s12 m4">
+				<div class="card  " ng-click="track('Clicked flipkart-affiliate homepage')">
+					<div class="card-image waves-effect waves-block waves-light"> <img style="padding:10%" class="activator responsive-img" src="img/flipkart-affiliate.jpg"> </div>
+					<div class="card-content"> <span class="card-title activator grey-text text-darken-4">flipkart-affiliate <i class="material-icons right">more_vert</i></span>
+						<p><a href="https://ritishgumber.github.io/flipkart-affiliate" target="_blank">Visit Website </a></p>
+					</div>
+					<div class="card-reveal"> <span class="card-title grey-text text-darken-4"><h3>Flipkart-Affiliate</h3><i class="material-icons right">close</i></span>A
+						node.js wrapper for <a href="https://affiliate.flipkart.com/">Flipkart Affiliate API</a></div>
+				</div>
+			</div>
+			<div class="col s12 m4">
+				<div class="card  ng-click=" track( 'Clicked tedxmsit homepage') "">
+					<div class="card-image waves-effect waves-block waves-light"> <img style="padding:10%" class="activator responsive-img" src="img/logo.jpg"> </div>
+					<div class="card-content"> <span class="card-title activator grey-text text-darken-4">TEDxMSIT<i class="material-icons right">more_vert</i></span>
+						<p><a href="http://tedx.msit.in" target="_blank">Visit Website </a></p>
+					</div>
+					<div class="card-reveal"> <span class="card-title grey-text text-darken-4"><h3>TEDxMSIT</h3><i class="material-icons right">close</i></span>TEDxMSIT
+						is a sedulous and result oriented team of budding engineers, working round the clock to make each of its endeavours
+						as quintessential as possible. The selection process for the team began with extensive online and offline publicity
+						on the campus. After rigorously screening an odd lot of about 400 students, a 25 member army of young and diligent
+						students was narrowed down to be part of TEDxMSIT. The society is efficiently managed into smaller groups to take care
+						of five different departments and work in synchronous with each other. TEDxMSIT is rapidly becoming a name in itself
+						and is primed to pounce upon any opportunity that comes its way.</div>
+				</div>
+			</div>
+			<div class="col s12 m4">
+				<a href="allProjects.html" ng-click="track('Clicked all projects')">
+					<h2>More....</h2>
+				</a>
+			</div>
+
+		</div>
+		<div ng-show="searchText == 'experience'" class="row">
+			<ul class="collection">
+				<li class="collection-item avatar">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="" class="circle">
+					<span class="company">Amazon Web Services</span>
+					<p class="title">Cloud Support Associate - II</p>
+					<p class="duration"> Sep, 2017 - Present
+					</p>
+				</li>
+				<li class="collection-item avatar">
+					<img src="img/cblogo.png" alt="" class="circle">
+					<span class="company">CloudBoost</span>
+					<p class="title">Software Engineer </p>
+					<p class="duration"> Dec, 2016 - Aug, 2017
+					</p>
+				</li>
+				<li class="collection-item avatar">
+					<img src="img/opsgain.png" alt="" class="circle">
+					<span class="company">OPSGAIN Tech</span>
+					<p class="title">MEAN Stack Developer </p>
+					<p class="duration"> Oct, 2016
+					</p>
+				</li>
+				<li class="collection-item avatar">
+					<img src="img/tedx.png" alt="" style="border-radius:0" class="circle">
+					<span class="company">TEDxMSIT</span>
+					<p class="title">Technical Head </p>
+					<p class="duration"> Oct, 2016 - Mar, 2017
+					</p>
+				</li>
+				<li class="collection-item avatar">
+					<img src="img/nm.jpg" alt="" class="circle">
+					<span class="company">nMemories</span>
+					<p class="title">Web Developer </p>
+					<p class="duration"> Nov, 2015
+					</p>
+				</li>
+				<li class="collection-item avatar">
+					<img src="img/osahub.jpg" alt="" class="circle">
+					<span class="company">OSAHUB</span>
+					<p class="title">Web Developer Intern </p>
+					<p class="duration"> Aug, 2015
+					</p>
+				</li>
+
+			</ul>
+		</div>
+		<div ng-show="searchText == 'skills'" class="row">
+			<br>
+			<div class="row">
+				<div class="skill col m4 s12">
+					<div class="chip nodejs-chip">
+						<img src="img/nodejs_logo.jpg" alt="NodeJS"> NodeJS
+					</div>
+					<span class="progress ">
+					<div class="determinate" style="width: 80%"></div>
+				</span>
+				</div>
+				<div class="skill col m4 s12 ">
+					<div class="chip angular-chip">
+						<img src="img/angular.png" alt="AngularJS"> AngularJS
+					</div>
+					<span class="progress ">
+					<div class="determinate" style="width: 82%"></div>
+				</span>
+				</div>
+				<div class="skill col m4 s12 ">
+					<div class="chip mongo-chip">
+						<img src="img/mongo.png" alt="MongoDB"> MongoDB
+					</div>
+					<span class="progress ">
+								<div class="determinate" style="width: 81%"></div>
+				</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="skill col m4 s12 ">
+					<div class="chip reactjs-chip">
+						<img src="img/reactjs.png" alt="ReactJS"> ReactJS
+					</div>
+					<span class="progress ">
+					<div class="determinate" style="width: 70%"></div>
+					</span>
+				</div>
+				<div class="skill col m4 s12 ">
+					<div class="chip c-chip">
+						<img src="img/c.png" alt="ReactJS"> C
+					</div>
+					<span class="progress ">
+								<div class="determinate" style="width: 83%"></div>
+								</span>
+				</div>
+				<div class="skill col m4 s12 ">
+					<div class="chip cpp-chip">
+						<img src="img/cpp.png" alt="ReactJS"> C++
+					</div>
+					<span class="progress ">
+											<div class="determinate" style="width: 85%"></div>
+											</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="skill col m4 s12 ">
+					<div class="chip java-chip">
+						<img src="img/java.png" alt="ReactJS"> Java
+					</div>
+					<span class="progress ">
+														<div class="determinate" style="width: 80%"></div>
+														</span>
+				</div>
+
+				<div class="skill col m4 s12 ">
+					<div class="chip html-chip">
+						<img src="img/html.png" alt="ReactJS"> HTML
+					</div>
+					<span class="progress ">
+																	<div class="determinate" style="width: 90%"></div>
+																	</span>
+				</div>
+				<div class="skill col m4 s12 ">
+					<div class="chip css-chip">
+						<img src="img/css.png" alt="ReactJS"> CSS
+					</div>
+					<span class="progress ">
+
+																			<div class="determinate" style="width: 79%"></div>
+																				</span>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;" ng-init="micon='format_align_justify'" ng-mouseover="micon='format_align_right'"
+		    ng-mouseleave="micon='format_align_justify'">
+			<a class="btn-floating btn-large red"> <i class="large material-icons">{{micon}}</i> </a>
+			<ul>
+				<li onclick="Materialize.toast('+91-9810474693', 4000)" ng-mouseover="class='snack' ; content = '+91-9810474693' ; icon = 'phone_iphone';track('Hovered Phone Toast icon') "
+				    ng-mouseleave="class='' "><a class="btn-floating blue"><i class="material-icons">phone</i></a></li>
+				<li onclick="Materialize.toast('hi@ritishgumber.me', 4000)"><a class="btn-floating yellow darken-1"><i class="material-icons" ng-mouseover="class='snack' ; icon = 'email' ; content = 'hi@ritishgumber.me';;track('Hovered Phone Toast icon')" ng-mouseleave="class='' ; " ng-click="openEmail()">email</i></a></li>
+			</ul>
+		</div>
+		<div class="hide-on-small-and-down">
+			<div class="fixed-action-btn horizontal showw .hide" ng-class="class" style="padding:5px;color:white;bottom: 45px; left: 24px;">
+				<span><i class="material-icons">{{icon}}</i>
+   {{content}}   </span></div>
+		</div>
+		<div id="modal1" class="modal modal-fixed-footer">
+			<div class="modal-content">
+				<h3 style="color: #26a69a;">Send Email</h3>
+				<div class="row">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s6">
+								<input placeholder="Name" id="first_name" type="text" class="validate" ng-model="senderName">
+								<label for="first_name">Name</label>
+							</div>
+							<div class="input-field col s6">
+								<input placeholder="Telephone" id="tel" type="tel" class="validate" ng-model="senderTelephone">
+								<label for="tel">Telephone</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input id="email" placeholder="Email" type="email" class="validate" ng-model="senderEmail">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<label for="message" data-error="wrong" data-success="right">Message</label>
+								<textarea id="message" class="materialize-textarea" placeholder="Message" ng-model="senderMessage">
+									</textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a class="waves-effect waves-light btn" ng-click="sendMail()">Send</a>
+			</div>
+		</div>
+		<div id="mapModal" class="modal">
+			<div class="modal-content">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5568816807872!2d76.9817412144944!3d28.6130673917138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb79ce5904123d78f!2sJawahar+Chowk!5e0!3m2!1sen!2sin!4v1468235860103"
+				    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div id="toast-container" class="hide-on-med-and-up"></div>
+	</div>
+</body>
+<script>
+	mixpanel.track("Visited:Home Page ");
+</script>
+<script src="https://cloudboost.io/js-sdk/cloudboost.js"></script>
+
+</html>

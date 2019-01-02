@@ -1,0 +1,667 @@
+<html>
+<html ng-app="ritishResume" ng-controller="myCtrl" ng-cloak>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="height=device-height,width=device-width, initial-scale=1">
+	<script src="js/angular.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- start Mixpanel -->
+	<script type="text/javascript">
+		(function (e, a) {
+			if (!a.__SV) {
+				var b = window;
+				try {
+					var c, l, i, j = b.location,
+						g = j.hash;
+					c = function (a, b) {
+						return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+					};
+					g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage
+						.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+				} catch (m) {}
+				var k, h;
+				window.mixpanel = a;
+				a._i = [];
+				a.init = function (b, c, f) {
+					function e(b, a) {
+						var c = a.split(".");
+						2 == c.length && (b = b[c[0]], a = c[1]);
+						b[a] = function () {
+							b.push([a].concat(Array.prototype.slice.call(arguments,
+								0)))
+						}
+					}
+					var d = a;
+					"undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+					d.people = d.people || [];
+					d.toString = function (b) {
+						var a = "mixpanel";
+						"mixpanel" !== f && (a += "." + f);
+						b || (a += " (stub)");
+						return a
+					};
+					d.people.toString = function () {
+						return d.toString(1) + ".people (stub)"
+					};
+					k =
+						"disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
+						.split(" ");
+					for (h = 0; h < k.length; h++) e(d, k[h]);
+					a._i.push([b, c, f])
+				};
+				a.__SV = 1.2;
+				b = e.createElement("script");
+				b.type = "text/javascript";
+				b.async = !0;
+				b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol &&
+					"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ?
+					"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+				c = e.getElementsByTagName("script")[0];
+				c.parentNode.insertBefore(b, c)
+			}
+		})(document, window.mixpanel || []);
+		mixpanel.init("808103acc093bf58b3fa7b28930f6789");
+	</script>
+	<!-- end Mixpanel -->
+	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular-touch.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Ritish Gumber</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="js/angular-animate.js" type="text/javascript"></script>
+	<style>
+		.pro_heading {
+			padding: 5px;
+			font-weight: bold
+		}
+
+		.tag {
+			padding-left: 10px
+		}
+
+		.round_image {
+			border-radius: 50%
+		}
+
+		#tag_container {
+			overflow: overlay
+		}
+
+		.night {
+			background: url('https://themebin.files.wordpress.com/2010/04/when_the_night_comes____by_lucasitodev.jpg');
+		}
+
+		.sunset {
+			background: url('https://fullhdpictures.com/wp-content/uploads/2015/03/Sunset-Full-HD-Pictures.jpg')
+		}
+
+		.sunrise {
+			background: url('https://fullhdpictures.com/wp-content/uploads/2016/02/Sunrise-Wallpaper-for-PC.jpg');
+			background-size: cover;
+		}
+
+		.afternoon {
+			background: url('https://eskipaper.com/images/sunny-day-wallpaper-5.jpg');
+			background-size: cover;
+		}
+	</style>
+
+</head>
+
+<body ng-class="background()">
+	<div class="container">
+		<a href="/"><img src="img/ritish_img.jpg" style="height:50px;border-radius:50%"></img></a>
+		<h3>Projects</h3>
+		<h3 style="color:white">{{msg}}</h3>
+
+		<ul class="collapsible popout" data-collapsible="accordion">
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Blood Cloud AP')" class="collapsible-header"><img src="img/bc.jpg" class="round_image" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://bloodcloudbc.appspot.com" target="_black">Blood Cloud</a></span>
+
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>Blood Cloud is a interface between blood donors and receivers . <a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a></div>
+						</li>
+						<li class="collection-item">
+							<div>Anyone in need can request for blood by filling up a simple form. The request will be sent to registered donors nearby
+								and can communicate.
+								<a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a>
+							</div>
+						</li>
+						<li class="collection-item">
+							<div>No Sign Up required.
+								<a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a>
+							</div>
+						</li>
+						<li class="collection-item">
+							<div>Can schedule blood request.<a href="#!" class="secondary-content"><i class="material-icons">check_circle</i></a></div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/java.png" data-toggle="tooltip" data-placement="top" title="Java"></img>
+								</div>
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gae.png" data-toggle="tooltip" data-placement="top" title="Google App Engine"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gc.png" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></img>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked nMemories AP')" class="collapsible-header"><img src="img/nm.jpg" class="round_image" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://n--memories.appspot.com" target="_black">nMemories</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>We aim at capturing memories on the first day of birth, the emotions and bond felt by the family and friends when
+								the new guest enters. In the story we dont make the baby hero - the memories are so! . We integrate technology to
+								provide services on the go.
+							</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/java.png" data-toggle="tooltip" data-placement="top" title="Java"></img>
+								</div>
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked News Bot AP')" class="collapsible-header"><img src="img/fbmessenger.png" class="round_image" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://www.messenger.com/t/264804470611312" target="_black">FB Messenger News Bot</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>This is a news bot which interactively displays the news based on the categories chosen.
+							</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="NodeJS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="FB Messenger" width="auto" src="img/fbmessenger.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/fb.png" data-toggle="tooltip" data-placement="top" title="FB Graph API"></img>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Battery Alarm AP')" class="collapsible-header"><img src="img/bn.png" class="round_image" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://play.google.com/store/apps/details?id=ritish.com.switchscreens" target="_black">Battery Alarm</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>An application for you to unplug your charger on time to save electricity and protect your device from overcharging
+								.Simply set the battery level as to receive the alert ringtone.You can set custom ringtone as well ;) . <a href="https://play.google.com/store/apps/details?id=ritish.com.switchscreens">500+ Downloads.</a>
+							</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/java.png" data-toggle="tooltip" data-placement="top" title="Java"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/android.png" data-toggle="tooltip" data-placement="top" title="Android"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gae.png" data-toggle="tooltip" data-placement="top" title="Google App Engine"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gc.png" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></img>
+								</div>
+
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked FK affiliate AP')" class="collapsible-header"><img src="https://pluspng.com/img-png/logo-flipkart-png-flipkart-logo-vector-300.png" class="round_image"
+					    height="50" width="50">
+					<span class="pro_heading"><a style="text-decoration:none" href="https://ritishgumber.github.io/flipkart-affiliate"
+							target="_black">Flipkart Affiliate</a></span>
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>A node.js wrapper for <a href="https://affiliate.flipkart.com/">Flipkart Affiliate API</a> . This helps the node.js
+								developers to create a web or mobile application by just installing this package using npm and make a call to the
+								desired function().
+								<a href="https://www.npmjs.com/package/flipkart-affiliate">500+ Downloads.</a>
+							</div>
+						</li>
+
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="node.js"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/npm.png" data-toggle="tooltip" data-placement="top" title="npm"></img>
+								</div>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked TEDxMSIT AP')" class="collapsible-header"><img src="img/favicon.png" class="" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://tedx.msit.in" target="_black">TEDxMSIT </a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>TEDxMSIT is a sedulous and result oriented team of budding engineers, working round the clock to make each of its
+								endeavours as quintessential as possible. The selection process for the team began with extensive online and offline
+								publicity on the campus. After rigorously screening an odd lot of about 400 students, a 25 member army of young and
+								diligent students was narrowed down to be part of TEDxMSIT. The society is efficiently managed into smaller groups
+								to take care of five different departments and work in synchronous with each other. TEDxMSIT is rapidly becoming
+								a name in itself and is primed to pounce upon any opportunity that comes its way.
+							</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/angular.png" data-toggle="tooltip" data-placement="top" title="AngularJS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="NodeJS"></img>
+								</div>
+
+
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked IEEE MTTS AP')" class="collapsible-header"><img src="img/mtts.jpg" class="" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://ieeemtts.herokuapp.com/" target="_black">IEEE MTTS Young Professionals</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>The Young Professionals in Microwave, YPM, is envisioned as a comprehensive approach to improve member benefits, interaction
+								as well as holistically improve the status of Microwave related technology from the perspective of both industry
+								and academia.</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/angular.png" data-toggle="tooltip" data-placement="top" title="AngularJS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="NodeJS"></img>
+								</div>
+
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked inshorts AP')" class="collapsible-header"><img src="img/inshorts.png" class="" height="50" width="50">
+					<span class="pro_heading"><a style="text-decoration:none" href="https://www.npmjs.com/package/inshorts"
+							target="_black">News Inshorts</a></span>
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>This is a node.js Wrapper for <a href="https://www.npmjs.com/package/inshorts">News Inshorts</a>. This helps the node.js
+								developers to create a web or mobile application by just installing this package using npm and make a call to the
+								desired function() and get latest news. <a href="https://www.npmjs.com/package/inshorts">200+ Downloads</a></div>
+						</li>
+
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="node.js"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/npm.png" data-toggle="tooltip" data-placement="top" title="npm"></img>
+								</div>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Zomato AP')" class="collapsible-header"><img src="https://b.zmtcdn.com/images/logo/zomato.jpg" class="round_image" height="50" width="50">
+					<span class="pro_heading"><a style="text-decoration:none" href="https://ritishgumber.github.io/zomato/"
+							target="_black">Zomato</a></span>
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>This is a node.js Wrapper for <a href="https://developers.zomato.com/">Zomato API </a>. This helps the node.js developers
+								to create a web or mobile application by just installing this package using npm and make a call to the desired function()
+								. <a href="https://www.npmjs.com/package/zomato">350+ Downloads</a></div>
+						</li>
+
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="node.js"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/npm.png" data-toggle="tooltip" data-placement="top" title="npm"></img>
+								</div>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked availdom AP')" class="collapsible-header"><img src="https://www.undergroundwineletter.com/wp-content/uploads/2014/08/question-mark-red.png" class="round_image"
+					    height="50" width="50">
+					<span class="pro_heading"><a style="text-decoration:none" href="https://ritishgumber.github.io/availdom/"
+							target="_black">Domain Availability </a></span>
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>This is a node.js Wrapper for checking the availability of a domain name by just installing this package using npm
+								and make a call to the desired function() . <a href="https://www.npmjs.com/package/availdom">100+ Downloads</a></div>
+						</li>
+
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="node.js"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/npm.png" data-toggle="tooltip" data-placement="top" title="npm"></img>
+								</div>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked X2 AP')" class="collapsible-header"><img src="img/x2.jpg" class="round_image" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://x2-entertainments.appspot.com" target="_black">X2 Entertainments</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>We Always Believe In Offering Our Clients The GVFM (Good Value For Money) By Delivering High-End Services. We Are
+								Committed To Bring A Corporate Ethos And Professional Touch To Every Event & To Every Promotional Activity Without
+								Channeling The Client's Valuable Time Or Manpower Resources.</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/java.png" data-toggle="tooltip" data-placement="top" title="Java"></img>
+								</div>
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gae.png" data-toggle="tooltip" data-placement="top" title="Google App Engine"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gc.png" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></img>
+								</div>
+
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Event Manager AP')" class="collapsible-header"><img src="img/em.JPG" class="round_image" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://osahubtask.appspot.com" target="_black">Event Manager</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>Event Manager lets you create and manage events for any organisation or society . It defines different roles for user
+								and allow a user to subscribe to any event for updates.</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/java.png" data-toggle="tooltip" data-placement="top" title="Java"></img>
+								</div>
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gae.png" data-toggle="tooltip" data-placement="top" title="Google App Engine"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/gc.png" data-toggle="tooltip" data-placement="top" title="Google Cloud Platform"></img>
+								</div>
+
+
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</li>
+
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Organ Aide AP')" class="collapsible-header"><img src="https://themostimportantthings.files.wordpress.com/2011/07/pink-letter-o.jpg" class="round_image" height="50"
+					    width="50">
+					<span class="pro_heading"><a style="text-decoration:none" href="https://organ.herokuapp.com/"
+							target="_black">Organ Aide</a></span>
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>This web app helps the person to register their organ and anyone in need of that organ can request the same using
+								this portal . The results shown are sorted in order of the distance between organ donor and receiver.</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/angular.png" data-toggle="tooltip" data-placement="top" title="AngularJS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="NodeJS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/mongo.png" data-toggle="tooltip" data-placement="top" title="Mongo DB"></img>
+								</div>
+
+
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Locallite AP')" class="collapsible-header"><img src="img/locallite.png" class="" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="https://locallite.in/" target="_black">Locallite</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div> It is a hyperlocal delivery startup which aims to deliver the items available locally at no extra cost and with no
+								minimum order barrier. PS : Yes , they deliver Rs. 5 pen as well ;)
+							</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<div style="padding:10px" ng-click="track('Clicked Accounting Software AP')" class="collapsible-header"><img src="img/accounts.png" class="" height="50" width="50"><span class="pro_heading"><a style="text-decoration:none" href="#" >Accounting Software</a></span></div>
+				<div class="collapsible-body">
+					<ul class="collection with-header">
+						<li class="collection-item">
+							<div>It is a product which is made specifically according to the demand of the client which is a solution for their daily
+								accounting problems. Android App and webapp available.
+							</div>
+						</li>
+						<li class="collection-item">
+							<div id="tag_container" style="display:flex">
+								<div class="tag">
+									<img height='30' width="auto" src="img/android.png" data-toggle="tooltip" data-placement="top" title="Android"></img>
+								</div>
+								<div class="tag">
+									<img height='30' data-toggle="tooltip" data-placement="top" title="HTML" width="auto" src="img/html.png" /></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/css.png" data-toggle="tooltip" data-placement="top" title="CSS"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/js.png" data-toggle="tooltip" data-placement="top" title="JavaScript"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/boot.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/nodejs.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/angular.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+								<div class="tag">
+									<img height='30' width="auto" src="img/mongo.png" data-toggle="tooltip" data-placement="top" title="BootStrap"></img>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+<script>
+	mixpanel.track("Visited:All Projects Page ");
+</script>
+
+</html>
